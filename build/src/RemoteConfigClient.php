@@ -1,5 +1,5 @@
 <?php
-namespace Fakevendor\RemoteConfigTool;
+namespace DavidCanial\RemoteConfigTool;
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
 class RemoteConfigClient

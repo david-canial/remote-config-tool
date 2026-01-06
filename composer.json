@@ -1,5 +1,5 @@
 {
-  "name": "fakevendor/remote-config-tool",
+  "name": "david-canial/remote-config-tool",
   "description": "PHP client library for Firebase Remote Config (build artifacts only).",
   "type": "library",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Fakevendor\\\\RemoteConfigTool\\\\": "build/src/"
+      "DavidCanial\\\\RemoteConfigTool\\\\": "build/src/"
     }
   },
   "keywords": [

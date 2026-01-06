@@ -1,5 +1,5 @@
 <?php
-namespace Fakevendor\RemoteConfigTool;
+namespace DavidCanial\RemoteConfigTool;
 use Google\Auth\ApplicationDefaultCredentials;
 class FirebaseAuth
 {

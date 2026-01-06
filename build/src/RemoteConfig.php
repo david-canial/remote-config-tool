@@ -1,5 +1,5 @@
 <?php
-namespace Fakevendor\RemoteConfigTool;
+namespace DavidCanial\RemoteConfigTool;
 use GuzzleHttp\Client;
 class RemoteConfig
 {

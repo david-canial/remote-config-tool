@@ -1,4 +1,4 @@
-## fakevendor/remote-config-tool
+## david-canial/remote-config-tool
 
 **Firebase Remote Config を操作するための PHP クライアントライブラリ**です。
 
@@ -21,7 +21,7 @@
 Composer でインストールします:
 
 ```bash
-composer require fakevendor/remote-config-tool
+composer require david-canial/remote-config-tool
 ```
 
 ---
@@ -68,7 +68,7 @@ export FIREBASE_PROJECT_ID="your-firebase-project-id"
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Fakevendor\RemoteConfigTool\RemoteConfig;
+use DavidCanial\RemoteConfigTool\RemoteConfig;
 
 // アクセストークンを取得
 $token = RemoteConfig::token();
@@ -100,7 +100,7 @@ Firebase Remote Config では、他の更新を誤って上書きしないよう
 `parameters` を一部変更する例:
 
 ```php
-use Fakevendor\RemoteConfigTool\RemoteConfig;
+use DavidCanial\RemoteConfigTool\RemoteConfig;
 
 // 現在の設定を取得
 $result = RemoteConfig::get();
@@ -135,7 +135,7 @@ $newEtag = $updateResult['etag'] ?? null;
 状況によっては、**ETag チェックを無視して常に現在の設定を上書きしたい** 場合もあります:
 
 ```php
-use Fakevendor\RemoteConfigTool\RemoteConfig;
+use DavidCanial\RemoteConfigTool\RemoteConfig;
 
 // 新しい parameters を用意
 $parameters = [
@@ -157,7 +157,7 @@ $newEtag = $result['etag'] ?? null;
 より細かく制御したい場合や、独自の Guzzle クライアントを注入したい場合は、`RemoteConfigClient` クラスを直接利用できます:
 
 ```php
-use Fakevendor\RemoteConfigTool\RemoteConfigClient;
+use DavidCanial\RemoteConfigTool\RemoteConfigClient;
 use GuzzleHttp\Client as HttpClient;
 
 // 環境変数を利用してクライアントを生成
@@ -184,7 +184,7 @@ $config = $result['data'];
 その上で `RemoteConfigClient` インスタンスを生成するヘルパーも提供しています:
 
 ```php
-use Fakevendor\RemoteConfigTool\RemoteConfigClient;
+use DavidCanial\RemoteConfigTool\RemoteConfigClient;
 
 // 例: プロジェクトルートに .env がある場合
 // .env
@@ -223,7 +223,7 @@ $result = $client->get();
 基本的なエラーハンドリング例:
 
 ```php
-use Fakevendor\RemoteConfigTool\RemoteConfig;
+use DavidCanial\RemoteConfigTool\RemoteConfig;
 use GuzzleHttp\Exception\ClientException;
 
 try {
